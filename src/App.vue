@@ -1,5 +1,5 @@
 <script setup>
-import { ref, defineAsyncComponent, computed } from 'vue'
+import { ref } from 'vue'
 import ListLayout from '@/components/ListLayout.vue'
 import TableLayout from '@/components/TableLayout.vue'
 import CardLayout from './components/CardLayout.vue'
@@ -73,7 +73,7 @@ const usuarios = ref([
     <section class="border rounded-3 p-4">
       <h2>Elige cómo mostrarlos</h2>
       <ul class="nav nav-tabs">
-        <li class="nav-item" v-for="(_, layout) in layouts">
+        <li class="nav-item" :class="componenteSeleccionado == layout ? 'active' : ''" v-for="(_, layout) in layouts">
           <a class="nav-link" href="#" @click="componenteSeleccionado = layout">{{
             layout }}</a>
         </li>

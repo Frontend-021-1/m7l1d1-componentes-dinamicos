@@ -20,4 +20,8 @@ const props = defineProps({
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+img {
+  border-radius: 50%;
+}
+</style>
